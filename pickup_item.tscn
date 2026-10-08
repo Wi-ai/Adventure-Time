@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://g8e6k1x57iim"]
+
+[ext_resource type="Texture2D" uid="uid://b4w56dlro4uo8" path="res://Assets/Ninja Adventure - Asset Pack/Ninja Adventure - Asset Pack/Items/Treasure/GoldCoin.png" id="1_5brm7"]
+[ext_resource type="Script" uid="uid://8ek4dlcw2x3g" path="res://Script/pickup_item.gd" id="1_25h1c"]
+[ext_resource type="Shape2D" uid="uid://cas7lgwpawbj0" path="res://Resources/GoldCoin/gold_coin_collision_shape.tres" id="2_25h1c"]
+
+[node name="PickUpItem" type="Area2D" unique_id=1172581812]
+collision_layer = 8
+script = ExtResource("1_25h1c")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1564082074]
+texture = ExtResource("1_5brm7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1249665365]
+shape = ExtResource("2_25h1c")
