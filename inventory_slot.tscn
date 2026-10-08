@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://3r4x6h72lylr"]
+
+[ext_resource type="Texture2D" uid="uid://dds3vabiyv8xt" path="res://Assets/Ninja Adventure - Asset Pack/Ninja Adventure - Asset Pack/Ui/Dialog/FacesetBox.png" id="1_cjnd3"]
+[ext_resource type="Script" uid="uid://ds608ujpx6g3l" path="res://Script/inventory_slot.gd" id="1_i1obx"]
+
+[node name="InventorySlot" type="VBoxContainer" unique_id=682884343]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_i1obx")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=209931563]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+texture = ExtResource("1_cjnd3")
+
+[node name="MenuButton" type="MenuButton" parent="NinePatchRect" unique_id=2041358901]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+item_count = 2
+popup/item_0/text = "Equip"
+popup/item_0/id = 0
+popup/item_1/text = "Drop"
+popup/item_1/id = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="NinePatchRect/MenuButton" unique_id=1557611926]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="NinePatchRect/MenuButton/CenterContainer" unique_id=758965713]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+expand_mode = 2
+stretch_mode = 5
+
+[node name="OnClickButton" type="Button" parent="NinePatchRect" unique_id=213743957]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="StacksLabel" type="Label" parent="NinePatchRect" unique_id=1311642535]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -24.0
+offset_top = -25.0
+offset_right = -6.0
+offset_bottom = -2.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="NameLabel" type="Label" parent="." unique_id=936174285]
+layout_mode = 2
+
+[node name="PriceLabel" type="Label" parent="." unique_id=1769518442]
+visible = false
+layout_mode = 2

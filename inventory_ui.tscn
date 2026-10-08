@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://cd7xjp6s2yv7h"]
+
+[ext_resource type="Script" uid="uid://cl7cqhiqjlvkk" path="res://Script/inventory_ui.gd" id="1_qgilg"]
+[ext_resource type="Texture2D" uid="uid://spo26ew6lp3k" path="res://Assets/Ninja Adventure - Asset Pack/Ninja Adventure - Asset Pack/Ui/Dialog/DialogBoxFaceset.png" id="2_4q282"]
+[ext_resource type="FontFile" uid="uid://b113smgunmiff" path="res://Assets/Ninja Adventure - Asset Pack/Ninja Adventure - Asset Pack/Ui/Font/NormalFont.ttf" id="3_i6wjk"]
+
+[sub_resource type="Theme" id="Theme_did2y"]
+default_font = ExtResource("3_i6wjk")
+
+[node name="InventoryUI" type="CanvasLayer" unique_id=1862164766]
+script = ExtResource("1_qgilg")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=374429194]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.84313726)
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=407606291]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 64
+theme_override_constants/margin_top = 64
+theme_override_constants/margin_right = 64
+theme_override_constants/margin_bottom = 64
+
+[node name="NinePatchRect" type="NinePatchRect" parent="MarginContainer" unique_id=437420398]
+layout_mode = 2
+texture = ExtResource("2_4q282")
+region_rect = Rect2(48.637535, 8.770126, 250.60309, 49.069138)
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 6
+patch_margin_bottom = 6
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/NinePatchRect" unique_id=1798591915]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/NinePatchRect/MarginContainer" unique_id=151353267]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/NinePatchRect/MarginContainer/VBoxContainer" unique_id=851943945]
+layout_mode = 2
+theme = SubResource("Theme_did2y")
+theme_override_colors/font_color = Color(0.3019608, 0.3019608, 0.3019608, 1)
+theme_override_font_sizes/font_size = 64
+text = "Inventory (Resouses)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer/NinePatchRect/MarginContainer/VBoxContainer" unique_id=852626110]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+columns = 4
