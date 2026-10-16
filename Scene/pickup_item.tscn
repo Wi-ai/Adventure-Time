@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://g8e6k1x57iim"]
+
+[ext_resource type="Script" uid="uid://8ek4dlcw2x3g" path="res://Script/pickup_item.gd" id="1_25h1c"]
+[ext_resource type="Texture2D" uid="uid://d2anx17m157bl" path="res://Assets/Ninja Adventure - Asset Pack/Ninja Adventure - Asset Pack/Items/Weapons/Book/Sprite.png" id="2_25h1c"]
+[ext_resource type="Shape2D" uid="uid://dbg8upsetc7ix" path="res://Resources/Weapons/SpellBook/spell_book_ground_rectangle_item.tres" id="3_i38vt"]
+
+[node name="PickUpItem" type="Area2D" unique_id=1172581812]
+collision_layer = 8
+script = ExtResource("1_25h1c")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1564082074]
+texture = ExtResource("2_25h1c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1249665365]
+position = Vector2(0.061956406, -0.04547739)
+shape = ExtResource("3_i38vt")

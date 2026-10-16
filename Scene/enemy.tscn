@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://n3fv4c74mmxj"]
+
+[ext_resource type="Script" uid="uid://c5hetwmxl8xdc" path="res://Script/enemy.gd" id="1_n6qjc"]
+[ext_resource type="SpriteFrames" uid="uid://dar4ek7fx83cp" path="res://Resources/enemies/Beast2 Enemy/beast2_animated_sprite_frames.tres" id="2_0qcj2"]
+[ext_resource type="Shape2D" uid="uid://cnel4ctvu4t34" path="res://Resources/enemies/Beast2 Enemy/beast2_collision_shape.tres" id="4_44hyy"]
+[ext_resource type="Script" uid="uid://bv77vbcgask6j" path="res://Script/enemy_animated_sprite_2d.gd" id="4_hti8k"]
+[ext_resource type="PackedScene" uid="uid://cfblpmkayru00" path="res://Scene/health_system.tscn" id="5_vmi60"]
+[ext_resource type="StyleBox" uid="uid://cdbohubb2xq0p" path="res://Resources/UI/health_bar_background.tres" id="7_0qcj2"]
+[ext_resource type="StyleBox" uid="uid://cp4dpjck02lch" path="res://Resources/UI/health_bar_fill.tres" id="8_5op34"]
+[ext_resource type="Script" uid="uid://cfu8ey18xbx23" path="res://Script/health_bar.gd" id="9_5op34"]
+
+[node name="Enemy" type="CharacterBody2D" unique_id=734989759]
+collision_layer = 32
+collision_mask = 22
+script = ExtResource("1_n6qjc")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1212619171]
+sprite_frames = ExtResource("2_0qcj2")
+animation = &"died"
+script = ExtResource("4_hti8k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=41528617]
+position = Vector2(0, 0.5)
+shape = ExtResource("4_44hyy")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=770722567]
+collision_layer = 32
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=619672622]
+shape = ExtResource("4_44hyy")
+
+[node name="HealthSystem" parent="." unique_id=1244916809 instance=ExtResource("5_vmi60")]
+max_health = 55
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=2144764269]
+offset_left = -10.0
+offset_top = -14.0
+offset_right = 10.0
+offset_bottom = -10.0
+theme_override_styles/background = ExtResource("7_0qcj2")
+theme_override_styles/fill = ExtResource("8_5op34")
+step = 1.0
+fill_mode = 1
+show_percentage = false
+script = ExtResource("9_5op34")
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

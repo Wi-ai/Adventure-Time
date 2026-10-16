@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://cuvw1wb4vc04k"]
+
+[ext_resource type="Texture2D" uid="uid://c4vf2mpjoveml" path="res://Assets/Ninja Adventure - Asset Pack/Ninja Adventure - Asset Pack/Actor/Character/OldMan2/SpriteSheet.png" id="1_uwn00"]
+[ext_resource type="Script" uid="uid://clx5rrlocnc6h" path="res://Script/merchant.gd" id="2_tsefp"]
+[ext_resource type="Theme" uid="uid://d3pbcjwarh0hg" path="res://Resources/UI/theme.tres" id="3_oomap"]
+[ext_resource type="PackedScene" uid="uid://cgd42wlferisi" path="res://Scene/shopping_ui.tscn" id="4_c1yc6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_glmhx"]
+radius = 40.0
+
+[node name="Merchant" type="Sprite2D" unique_id=21659555 groups=["merchant"]]
+texture = ExtResource("1_uwn00")
+region_enabled = true
+region_rect = Rect2(0, 1, 16, 15)
+script = ExtResource("2_tsefp")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=407752029]
+collision_layer = 128
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1538897165]
+shape = SubResource("CircleShape2D_glmhx")
+
+[node name="Label" type="Label" parent="." unique_id=514429428]
+offset_left = -76.0
+offset_top = -34.0
+offset_right = 79.0
+offset_bottom = -11.0
+theme = ExtResource("3_oomap")
+text = "PRESS \"X\" TO SHOP"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ShoppingUI" parent="." unique_id=325433023 instance=ExtResource("4_c1yc6")]
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

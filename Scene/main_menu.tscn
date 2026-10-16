@@ -1,0 +1,185 @@
+[gd_scene format=3 uid="uid://dqp7emjiddy26"]
+
+[ext_resource type="Theme" uid="uid://dkdi4wui7s6au" path="res://Resources/UI/home_screen_theme.tres" id="1_ftydy"]
+
+[sub_resource type="Animation" id="Animation_ftydy"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:offset_transform_rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:offset_transform_scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:z_index")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_87ipw"]
+resource_name = "hover"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:offset_transform_rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.100000024),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.061086524]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:offset_transform_scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.100000024),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.2, 1.2)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:z_index")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.0079, 0.07),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hii65"]
+_data = {
+&"RESET": SubResource("Animation_ftydy"),
+&"hover": SubResource("Animation_87ipw")
+}
+
+[node name="MainMenu" type="Control" unique_id=40424640]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_ftydy")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2002240693]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.2778134, 0.5896233, 0.37776202, 1)
+
+[node name="Panel" type="Panel" parent="." unique_id=1926750239]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.492
+anchor_top = 1.0
+anchor_right = 0.492
+anchor_bottom = 1.0
+offset_left = -133.784
+offset_top = -315.0
+offset_right = 140.216
+offset_bottom = -103.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=805649795]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Play" type="Button" parent="Panel/VBoxContainer" unique_id=483778906]
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+offset_transform_enabled = true
+text = "Play"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Panel/VBoxContainer/Play" unique_id=875546981]
+libraries/ = SubResource("AnimationLibrary_hii65")
+
+[node name="Options" type="Button" parent="Panel/VBoxContainer" unique_id=10364597]
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+offset_transform_enabled = true
+text = "Options
+"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Panel/VBoxContainer/Options" unique_id=1805830254]
+libraries/ = SubResource("AnimationLibrary_hii65")
+
+[node name="Quit" type="Button" parent="Panel/VBoxContainer" unique_id=435849742]
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+offset_transform_enabled = true
+text = "Quit"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Panel/VBoxContainer/Quit" unique_id=1246008350]
+libraries/ = SubResource("AnimationLibrary_hii65")
+
+[node name="Label" type="Label" parent="." unique_id=964795431]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -291.0
+offset_top = 78.0
+offset_right = 293.0
+offset_bottom = 160.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.0035191667, 0.0035191681, 0.0035191672, 1)
+theme_override_constants/outline_size = 7
+theme_override_constants/shadow_outline_size = 39
+theme_override_font_sizes/font_size = 63
+text = "Adventure Time"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="mouse_entered" from="Panel/VBoxContainer/Play" to="Panel/VBoxContainer/Play/AnimationPlayer" method="play" binds= ["hover"]]
+[connection signal="mouse_exited" from="Panel/VBoxContainer/Play" to="Panel/VBoxContainer/Play/AnimationPlayer" method="play_backwards" binds= ["hover"]]
+[connection signal="mouse_entered" from="Panel/VBoxContainer/Options" to="Panel/VBoxContainer/Options/AnimationPlayer" method="play" binds= ["hover"]]
+[connection signal="mouse_exited" from="Panel/VBoxContainer/Options" to="Panel/VBoxContainer/Options/AnimationPlayer" method="play_backwards" binds= ["hover"]]
+[connection signal="mouse_entered" from="Panel/VBoxContainer/Quit" to="Panel/VBoxContainer/Quit/AnimationPlayer" method="play" binds= ["hover"]]
+[connection signal="mouse_exited" from="Panel/VBoxContainer/Quit" to="Panel/VBoxContainer/Quit/AnimationPlayer" method="play_backwards" binds= ["hover"]]
