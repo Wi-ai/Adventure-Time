@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="SpellConfig" format=3 uid="uid://du6tiubq2djbt"]
+
+[ext_resource type="Shape2D" uid="uid://dfrs2tchn2vr" path="res://Resources/Spells/Fireball/fireball_collision_shape.tres" id="1_n7vo3"]
+[ext_resource type="Script" uid="uid://c0bpjkhpv0gs5" path="res://Script/spell_config.gd" id="2_31krm"]
+[ext_resource type="Texture2D" uid="uid://bie5ohnn28hig" path="res://Assets/Ninja Adventure - Asset Pack/Ninja Adventure - Asset Pack/Items/Scroll/ScrollFire.png" id="3_jh1w2"]
+
+[resource]
+script = ExtResource("2_31krm")
+speed = 40.0
+collision_shape = ExtResource("1_n7vo3")
+spell_name = "Fireball"
+initial_rotation = 90
+ui_texture = ExtResource("3_jh1w2")
+initial_cooldown = 2.0
+damage = 5
