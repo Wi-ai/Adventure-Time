@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="InventoryItem" format=3 uid="uid://bjvr76vfl8dbi"]
+
+[ext_resource type="Shape2D" uid="uid://cas7lgwpawbj0" path="res://Resources/GoldCoin/gold_coin_collision_shape.tres" id="1_ieuux"]
+[ext_resource type="Script" uid="uid://u33qmaymqmct" path="res://Script/inventory_item.gd" id="2_0ojeg"]
+[ext_resource type="Texture2D" uid="uid://b4w56dlro4uo8" path="res://Assets/Ninja Adventure - Asset Pack/Ninja Adventure - Asset Pack/Items/Treasure/GoldCoin.png" id="3_mgbgl"]
+
+[resource]
+script = ExtResource("2_0ojeg")
+ground_collision_shape = ExtResource("1_ieuux")
+name = "Gold"
+texture = ExtResource("3_mgbgl")
+max_stacks = 100
+price = 1
