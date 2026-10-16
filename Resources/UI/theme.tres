@@ -1,0 +1,6 @@
+[gd_resource type="Theme" format=3 uid="uid://d3pbcjwarh0hg"]
+
+[ext_resource type="FontFile" uid="uid://b113smgunmiff" path="res://Assets/Ninja Adventure - Asset Pack/Ninja Adventure - Asset Pack/Ui/Font/NormalFont.ttf" id="1_32fw2"]
+
+[resource]
+default_font = ExtResource("1_32fw2")
