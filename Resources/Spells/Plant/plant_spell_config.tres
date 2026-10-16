@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="SpellConfig" format=3 uid="uid://dh7b4soeikgxl"]
+
+[ext_resource type="Script" uid="uid://c0bpjkhpv0gs5" path="res://Script/spell_config.gd" id="1_707m7"]
+[ext_resource type="Shape2D" uid="uid://dxhi5bdqmfkhf" path="res://Resources/Spells/Plant/plant_collision_shape.tres" id="1_f8bck"]
+[ext_resource type="Texture2D" uid="uid://cgwlahktclrso" path="res://Assets/Ninja Adventure - Asset Pack/Ninja Adventure - Asset Pack/Items/Scroll/ScrollPlant.png" id="3_nwwt7"]
+
+[resource]
+script = ExtResource("1_707m7")
+speed = 40.0
+collision_shape = ExtResource("1_f8bck")
+spell_name = "Plant"
+ui_texture = ExtResource("3_nwwt7")
+initial_cooldown = 25.0
+damage = 40
+metadata/_custom_type_script = "uid://c0bpjkhpv0gs5"
