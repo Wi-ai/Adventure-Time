@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://dfl2jf5vpwmqh"]
+
+[ext_resource type="Script" uid="uid://bxcbea18gk8kh" path="res://Script/on_screen_equipment_slot.gd" id="1_fy1tn"]
+[ext_resource type="Texture2D" uid="uid://dds3vabiyv8xt" path="res://Assets/Ninja Adventure - Asset Pack/Ninja Adventure - Asset Pack/Ui/Dialog/FacesetBox.png" id="1_o2vpr"]
+[ext_resource type="Theme" uid="uid://d3pbcjwarh0hg" path="res://Resources/UI/theme.tres" id="2_fy1tn"]
+
+[node name="OnScreenEquipmentSlot" type="VBoxContainer" unique_id=1162823925]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_fy1tn")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=1940171760]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+texture = ExtResource("1_o2vpr")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+
+[node name="StacksLabel" type="Label" parent="NinePatchRect" unique_id=1578424137]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -23.0
+offset_top = -25.0
+offset_right = -4.0
+offset_bottom = -2.0
+grow_horizontal = 0
+grow_vertical = 0
+theme = ExtResource("2_fy1tn")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="NinePatchRect" unique_id=1088992350]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 6.0
+offset_bottom = -6.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="NinePatchRect/CenterContainer" unique_id=342876327]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+expand_mode = 2
+stretch_mode = 5
+
+[node name="ColorRect" type="ColorRect" parent="NinePatchRect" unique_id=861232662]
+visible = false
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 50.0
+offset_bottom = 10.0
+color = Color(0.65347236, 0.70895964, 0.94097495, 0.43529412)
+
+[node name="SlotLabel" type="Label" parent="." unique_id=392909473]
+layout_mode = 2
+theme = ExtResource("2_fy1tn")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 12
+text = "R    Hand"
+horizontal_alignment = 1
+vertical_alignment = 1

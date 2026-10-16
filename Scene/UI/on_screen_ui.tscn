@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://bp1bphkh8e8kl"]
+
+[ext_resource type="Script" uid="uid://y05etqpc363a" path="res://Script/on_screen_ui.gd" id="1_rwuar"]
+[ext_resource type="PackedScene" uid="uid://dfl2jf5vpwmqh" path="res://Scene/UI/on_screen_equipment_slot.tscn" id="2_7o5ps"]
+[ext_resource type="StyleBox" uid="uid://cdbohubb2xq0p" path="res://Resources/UI/health_bar_background.tres" id="2_kjacw"]
+[ext_resource type="StyleBox" uid="uid://cp4dpjck02lch" path="res://Resources/UI/health_bar_fill.tres" id="3_00ucs"]
+
+[node name="OnScreenUI" type="CanvasLayer" unique_id=1586767921]
+script = ExtResource("1_rwuar")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=824618483]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="ProgressBar" type="ProgressBar" parent="MarginContainer" unique_id=1841023449]
+custom_minimum_size = Vector2(200, 16)
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_styles/background = ExtResource("2_kjacw")
+theme_override_styles/fill = ExtResource("3_00ucs")
+value = 100.0
+show_percentage = false
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=770714588]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+
+[node name="RightHandSlot" parent="MarginContainer/HBoxContainer" unique_id=1162823925 instance=ExtResource("2_7o5ps")]
+unique_name_in_owner = true
+layout_mode = 2
+slot_name = "Right Hand"
+
+[node name="LeftHandSlot" parent="MarginContainer/HBoxContainer" unique_id=1469958356 instance=ExtResource("2_7o5ps")]
+unique_name_in_owner = true
+layout_mode = 2
+slot_name = "Left Hand"
+
+[node name="PotionSlot" parent="MarginContainer/HBoxContainer" unique_id=103822153 instance=ExtResource("2_7o5ps")]
+unique_name_in_owner = true
+layout_mode = 2
+slot_name = "Potion"
+
+[node name="SpellSlot" parent="MarginContainer/HBoxContainer" unique_id=158828609 instance=ExtResource("2_7o5ps")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+slot_name = "Spell"
