@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="SpellConfig" format=3 uid="uid://bwyby2jbn1r67"]
+
+[ext_resource type="Script" uid="uid://c0bpjkhpv0gs5" path="res://Script/spell_config.gd" id="1_3aamy"]
+[ext_resource type="Shape2D" uid="uid://6bh1eb4mffts" path="res://Resources/Spells/Ice/ice_collision_shape.tres" id="1_bu0cp"]
+[ext_resource type="Texture2D" uid="uid://dgduqursw2oej" path="res://Assets/Ninja Adventure - Asset Pack/Ninja Adventure - Asset Pack/Items/Scroll/ScrollIce.png" id="3_godpn"]
+
+[resource]
+script = ExtResource("1_3aamy")
+speed = 40.0
+collision_shape = ExtResource("1_bu0cp")
+spell_name = "Ice"
+ui_texture = ExtResource("3_godpn")
+initial_cooldown = 30.0
+damage = 50
+metadata/_custom_type_script = "uid://c0bpjkhpv0gs5"
