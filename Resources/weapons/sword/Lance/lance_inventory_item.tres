@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="InventoryItem" format=3 uid="uid://btrcukai26ghx"]
+
+[ext_resource type="Shape2D" uid="uid://d2stxgimh3bv8" path="res://Resources/Weapons/Lance/lance_ground_collision_shape.tres" id="1_41epi"]
+[ext_resource type="Script" uid="uid://u33qmaymqmct" path="res://Script/inventory_item.gd" id="2_uwjq8"]
+[ext_resource type="Texture2D" uid="uid://d1ck30jqk4msm" path="res://Assets/Ninja Adventure - Asset Pack/Ninja Adventure - Asset Pack/Items/Weapons/Lance2/Sprite.png" id="3_hymtu"]
+[ext_resource type="Resource" uid="uid://cjosflgstxjrl" path="res://Resources/Weapons/Lance/lance_weapon_item.tres" id="4_uwjq8"]
+
+[resource]
+script = ExtResource("2_uwjq8")
+slot_type = "Right_Hand"
+ground_collision_shape = ExtResource("1_41epi")
+name = "Lance"
+texture = ExtResource("3_hymtu")
+max_stacks = 1
+price = 50
+weapon_item = ExtResource("4_uwjq8")
