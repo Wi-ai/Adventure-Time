@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="InventoryItem" format=3 uid="uid://c6ar3wnl6ihl"]
+
+[ext_resource type="Script" uid="uid://u33qmaymqmct" path="res://Script/inventory_item.gd" id="1_4cjwe"]
+[ext_resource type="Shape2D" uid="uid://dyojo7tbupuby" path="res://Resources/Weapons/Sword/sword_ground_collision_shape.tres" id="1_donen"]
+[ext_resource type="Texture2D" uid="uid://bli8bhjv65yoi" path="res://Assets/Ninja Adventure - Asset Pack/Ninja Adventure - Asset Pack/Items/Weapons/BigSword/Sprite.png" id="2_donen"]
+[ext_resource type="Resource" uid="uid://wvq7cpd173vp" path="res://Resources/Weapons/Sword/sword_weapon_item.tres" id="4_00ybc"]
+
+[resource]
+script = ExtResource("1_4cjwe")
+slot_type = "Right_Hand"
+ground_collision_shape = ExtResource("1_donen")
+name = "Sword"
+texture = ExtResource("2_donen")
+max_stacks = 1
+price = 50
+weapon_item = ExtResource("4_00ybc")

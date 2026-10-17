@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="WeaponItem" format=3 uid="uid://wvq7cpd173vp"]
+
+[ext_resource type="Texture2D" uid="uid://bw0w8ydkxgdwn" path="res://Assets/Ninja Adventure - Asset Pack/Ninja Adventure - Asset Pack/Items/Weapons/BigSword/SpriteInHand.png" id="1_61wvd"]
+[ext_resource type="Shape2D" uid="uid://c0f482mb1n5bl" path="res://Resources/Weapons/Sword/sword_weapon_item_collision_shape.tres" id="1_dwusf"]
+[ext_resource type="Script" uid="uid://dinygltw52lpe" path="res://Script/weaponitem.gd" id="2_dwusf"]
+
+[resource]
+script = ExtResource("2_dwusf")
+in_hand_texture = ExtResource("1_61wvd")
+collision_shape = ExtResource("1_dwusf")
+attack_type = "Melee"
+left_attachment_position = Vector2(-14.028, 4.331)
+right_attachment_position = Vector2(14.066, 4.182)
+front_attachment_position = Vector2(-1.839, 14.29)
+back_attachment_position = Vector2(-3.028, -14.101)
+left_rotation = 90
+right_rotation = -90
+back_rotation = 180
+left_z_index = 1
+right_z_index = 1
+front_z_index = 1
