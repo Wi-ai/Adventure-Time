@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="WeaponItem" format=3 uid="uid://cjosflgstxjrl"]
+
+[ext_resource type="Shape2D" uid="uid://d2stxgimh3bv8" path="res://Resources/Weapons/Lance/lance_ground_collision_shape.tres" id="1_ahj77"]
+[ext_resource type="Texture2D" uid="uid://d25fqonf86xy2" path="res://Assets/Ninja Adventure - Asset Pack/Ninja Adventure - Asset Pack/Items/Weapons/Lance2/SpriteInHand.png" id="1_fufh8"]
+[ext_resource type="Script" uid="uid://dinygltw52lpe" path="res://Script/weaponitem.gd" id="2_ahj77"]
+
+[resource]
+script = ExtResource("2_ahj77")
+in_hand_texture = ExtResource("1_fufh8")
+collision_shape = ExtResource("1_ahj77")
+attack_type = "Melee"
+left_attachment_position = Vector2(-14.896, 3.902)
+right_attachment_position = Vector2(14.968, 3.902)
+front_attachment_position = Vector2(-2.067, 14.977)
+back_attachment_position = Vector2(-2.99, -14.927)
+left_rotation = 90
+right_rotation = -90
+back_rotation = 180
+left_z_index = 1
+right_z_index = 1
+front_z_index = 1
