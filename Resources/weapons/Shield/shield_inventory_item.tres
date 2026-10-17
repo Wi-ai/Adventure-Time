@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="InventoryItem" format=3 uid="uid://c5ecih47jpuum"]
+
+[ext_resource type="Shape2D" uid="uid://cke86coepnqxx" path="res://Resources/Weapons/Shield/shield_ground_collision_shape.tres" id="1_ald6a"]
+[ext_resource type="Script" uid="uid://u33qmaymqmct" path="res://Script/inventory_item.gd" id="2_axa0i"]
+[ext_resource type="Texture2D" uid="uid://b60tu5mrer80f" path="res://Assets/Ninja Adventure - Asset Pack/Ninja Adventure - Asset Pack/Items/Weapons/Shield/Shield.png" id="3_c6mej"]
+[ext_resource type="Resource" uid="uid://brkdj3lsdbqjb" path="res://Resources/Weapons/Shield/shield_weapon_item.tres" id="4_bpxnh"]
+
+[resource]
+script = ExtResource("2_axa0i")
+slot_type = "Left_Hand"
+ground_collision_shape = ExtResource("1_ald6a")
+name = "Shield"
+texture = ExtResource("3_c6mej")
+max_stacks = 1
+price = 100
+weapon_item = ExtResource("4_bpxnh")
