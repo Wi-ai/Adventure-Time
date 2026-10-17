@@ -16,5 +16,21 @@ Assets Link: https://pixel-boy.itch.io/ninja-adventure-asset-pack
 
 ## Here’s How to run the Project :)
 Yuo can try the demo at itch.io 
-Demo Link: 
+Demo Link: https://itch.io/embed-upload/19814547?color=333333
 
+## ​Controls 
+
+Use: 
+
+"A" or "Left-arrow" - Move Left
+"D" or "Right-arrow" - Move Right
+"W" or "Up-arrow" - Move Backward​
+"S" or "Down-arrow" - Move Forward
+"Tab" - Open Inventory
+
+### Attack
+
+"Q" - Attack with Left Hand
+"E" - Attack with Right Hand
+
+​
